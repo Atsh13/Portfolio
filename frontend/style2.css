@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: white;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+/* 🌌 Background Animation */
+.bg-animation {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-animation span {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #00f5ff, transparent);
+  filter: blur(80px);
+  animation: float 10s infinite ease-in-out;
+}
+
+.bg-animation span:nth-child(1) { top: 10%; left: 20%; }
+.bg-animation span:nth-child(2) { top: 60%; left: 70%; }
+.bg-animation span:nth-child(3) { top: 30%; left: 80%; }
+.bg-animation span:nth-child(4) { top: 80%; left: 10%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🧭 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  color: #00f5ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00f5ff;
+}
+
+/* 🔥 Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  min-height: 100vh;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.hero-text span {
+  color: #00f5ff;
+  text-shadow: 0 0 20px #00f5ff;
+}
+
+.hero-text h3 {
+  margin: 10px 0;
+  color: #ccc;
+  margin-left: 200px;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #aaa;
+  margin-left: 200px;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-left: 200px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00f5ff, #9d00ff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00f5ff;
+  align-items: center;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 60px #00f5ff, 0 0 120px #9d00ff;
+}
+
+/* 📄 Sections */
+.section {
+  padding: 80px;
+  text-align: center;
+}
+
+/* 🧠 Skills */
+.skills-container {
+  margin-top: 20px;
+}
+
+.skill {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: linear-gradient(45deg, #00f5ff, #9d00ff);
+  transform: scale(1.1);
+}
+
+/* 🚀 Projects */
+.project1, .project2 {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
