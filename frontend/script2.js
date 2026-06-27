@@ -1,4 +1,5 @@
-fetch("http://localhost:5000/projects")
+const API = import.meta.env.VITE_API_URL;
+fetch(`${API}/projects`)
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("project-list");
