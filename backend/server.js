@@ -9,7 +9,11 @@ const app = express();
 const PORT = 5000;
 
 // 🔧 MIDDLEWARE
-app.use(cors());
+app.use(cors({
+  origin: "https://frontend-portfolio-atshaya.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // 🔗 MONGODB CONNECTION (USE YOUR WORKING URL)
